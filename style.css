@@ -1,0 +1,202 @@
+/*Master Style*/
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: "Poppins", sans-serif;
+}
+.container {
+	width: 100vw;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 5rem;
+	padding: 0 2rem;
+}
+img {
+	margin-top: 18%;
+}
+.login-wrapper {
+	margin-top: 5%;
+	align-items: center;
+	justify-content: center;
+}
+form {
+	width: 360px;
+	margin-left: 130px;
+}
+.login-contents {
+	justify-content: center;
+	text-align: center;
+	margin-right: 40px;
+	padding: 10px;
+}
+.login-contents h1 {
+	color: rgb(79, 27, 163);
+	padding: 6px;
+	margin-bottom: 20px;
+}
+/*Input Conatiners Styles*/
+.cont1 {
+    position: relative;
+	display: grid;
+	grid-template-columns: 7% 93%;
+	margin: 25px 0;
+	padding: 5px 0;
+	border-bottom: 2px solid #d9d9d9;
+}
+.cont1.one {
+	margin-top: 0;
+}
+.cont1.two {
+	margin-bottom: 4px;
+}
+.i {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    color: #d9d9d9;
+    transition: .3s;
+}
+.cont1 > div {
+	position: relative;
+	height: 45px;
+}
+.cont1 > div h5 {
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #999;
+	font-size: 18px;
+	font-style: italic;
+	font-weight:500;
+	transition: 0.3s;
+}
+
+/*Before and After Styles for Input Conatiners*/
+
+.cont1:after , .cont1:before{
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color:#36678E ;
+    transition: .5s;
+}
+.cont1:after{
+    right: 50%;
+}
+.cont1:before{
+    left: 50%;
+}
+.cont1.focus .i{
+    color:#36678E;
+}
+.cont1.focus div h5{
+    top: -5px;
+    font-size: 15px;
+}
+.cont1.focus:after, .cont1.focus:before{
+    width: 50%;
+}
+
+/*Input Boxes Styles*/
+
+input[type="text"],input[type="password"] {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	border: none;
+	outline: none;
+	background: none;
+	padding: 0.5rem 0.7rem;
+	font-size: 1rem;
+	color: #555;
+	font-family: "Poppins", sans-serif;
+}
+
+/*Submit Button Style*/
+
+button {
+	background-color: #40bb40;
+	color: white;
+	padding: 10px 0; /*padding: top left*/
+	margin: 20px 0; /*margin: top right*/
+	border: none;
+	cursor: pointer;
+	width: 100px;
+	border-radius: 80px;
+    margin-right: 30px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+}
+
+button:hover {
+	background:linear-gradient(to bottom,#33cc33 0%, #00cc66 100%);
+	transition: 7s;
+}
+a {
+    display: block;
+    text-align: right;
+	text-decoration: none;
+	font-size: small;
+	color: rgb(143, 132, 143);
+	transition: 0.3s;
+}
+a:hover {
+	color: rgb(34, 117, 172);
+}
+
+/*Date and Time Styles*/
+
+.login-wrapper .date-time{
+	font-family:'Poppins', sans-serif;
+	text-decoration: none;
+	font-style: italic;
+	margin-top: 50px;
+	margin-left: 190px;
+	color: rgb(55, 125, 128);
+}
+
+
+/*Responsive CSS*/
+
+@media screen and (max-width: 1050px){
+    .container{
+        grid-gap: 0;
+    }
+}
+@media screen and (max-width: 1000px){
+    form{
+        width:290px;
+    }
+    form h2{
+        font-size: 2.4rem;
+        margin: 8px 0;
+    }
+    .img img{
+		width: 400px;
+    }
+}
+
+@media screen and (max-width: 990px){
+	.img{
+		display: none;
+	}
+
+	.container{
+		grid-template-columns: 1fr;
+	}
+
+	.login-contents{
+		justify-content: center;
+	}
+	.login-wrapper .date-time{
+		margin-left: 160px;
+	}
+}
